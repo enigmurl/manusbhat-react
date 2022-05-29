@@ -1,0 +1,15 @@
+.navbar {
+    position: fixed;
+    width: 100vw;
+    height: 55px;
+
+    background: white;
+
+    border-bottom: solid black 2px;
+
+    font-family: 'Montserrat-bold';
+}
+
+.navbuttons {
+    float: right
+}
