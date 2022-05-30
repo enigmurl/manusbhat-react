@@ -15,7 +15,7 @@ import StandardTemplate from "../commons";
 
 function Home() {
     return (
-        <StandardTemplate> 
+        <StandardTemplate active = 'Home'> 
             
         </StandardTemplate>
     );

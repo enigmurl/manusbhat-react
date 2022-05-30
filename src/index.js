@@ -10,7 +10,7 @@ import ReactDOM from 'react-dom/client';
 
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
-import Academic from './routes/Academic';
+import Academics from './routes/Academics';
 import Contact from './routes/Contact';
 import Extracurriculars from './routes/Extracurriculars';
 import Home from './routes/Home';
@@ -26,7 +26,7 @@ root.render(
       <Route path="/" element={<Home />} />
       <Route path="work" element={<Work />} />
       <Route path="extracurriculars" element={<Extracurriculars />} />
-      <Route path="academic" element={<Academic />} />
+      <Route path="academics" element={<Academics />} />
       <Route path="skills" element={<Skills />} />
       <Route path="contact" element={<Contact />} />
     </Routes>

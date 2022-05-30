@@ -14,7 +14,7 @@ import StandardTemplate from "../commons";
 */
 function Work() {
     return (
-        <StandardTemplate> 
+        <StandardTemplate active = 'Work | Large Projects'> 
             
         </StandardTemplate>
     );

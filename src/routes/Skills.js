@@ -14,7 +14,7 @@ import StandardTemplate from "../commons";
 
 function Skills() {
     return (
-        <StandardTemplate> 
+        <StandardTemplate active = 'Skills'> 
             
         </StandardTemplate>
     );

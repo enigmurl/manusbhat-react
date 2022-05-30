@@ -13,7 +13,7 @@ import StandardTemplate from "../commons";
 */
 function Extracurriculars() {
     return (
-        <StandardTemplate> 
+        <StandardTemplate active = 'Extracurriculars'> 
             
         </StandardTemplate>
     );

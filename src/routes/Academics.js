@@ -13,12 +13,13 @@ import StandardTemplate from "../commons";
  - self studied works
  - honors
 */
-function Academic() {
+function Academics() {
     return (
-        <StandardTemplate> 
+        <StandardTemplate active = 'Academics | Honors'> 
+
         </StandardTemplate>
     );
 }
 
 
-export default Academic;
+export default Academics;

@@ -1,15 +1,148 @@
+/**
+ *  COPYRIGHT © 2022 MANU BHAT
+ *  
+ *  ALL RIGHTS RESERVED
+ * 
+ */
+
+
 .navbar {
     position: fixed;
     width: 100vw;
-    height: 55px;
+    height: 65px;
 
-    background: white;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
 
-    border-bottom: solid black 2px;
+    background: rgba(51, 51, 51, 0.6);
 
-    font-family: 'Montserrat-bold';
+    backdrop-filter: blur(4px);
+    border-bottom: ridge 0.25px gray;
+    box-shadow: 0px 2px 35px -4px black;
 }
 
-.navbuttons {
-    float: right
+/* Manu Bhat Title */
+.navbar > a {
+    font-family: 'PT serif';
+    font-size: 40px;
+    color: #EEEEFF;
+
+    text-align: center;
+    text-decoration: none;
+
+    margin-left: 50px;
+    flex-grow: 1;
+}
+
+.nav-buttons {
+    margin: 0 50px 0 20px;
+}
+.navbar ul {
+    list-style: none;
+    padding-inline-start: 0px;
+}
+.nav-buttons {
+    display: inline;
+}
+.nav-buttons li {
+    display: inline-block;
+    position: relative;
+}
+/* second order are vertical */
+.nav-buttons ul li {
+    display: block;
+}
+
+/* add in the separators */
+.nav-buttons > li > .nav-button-link {
+    border-right: solid 2px var(--accent);
+    margin: 7px 0;
+}
+
+.nav-buttons > li:last-child > .nav-button-link {
+    border-right: solid 0px var(--accent);
+} 
+
+/* First or second order nav button */
+.nav-button-link {
+    font-size: 14px;
+    text-decoration: none;
+    text-align: center;
+    font-family: 'Montserrat-light';
+    color: #FFFFFF;
+
+    display: block;
+
+    padding: 6px 7px;
+}
+
+.nav-button-link:visited {
+    color: #FFFFFF;
+}
+
+.active-link {
+    color: var(--link) !important;
+}
+
+/* Dropdowns */
+.nav-dropdown {
+    position: absolute;
+
+    opacity: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+    --extra-padding: 20px;
+    width: calc(100% + var(--extra-padding));
+    /* border is 2px, -5px for extra */
+    transform: translateX(calc(-2px - var(--extra-padding)/2));
+
+    border: solid 2px var(--accent);
+    border-radius: 5px;
+    background: rgba(51, 51, 51, 0.5);
+    -webkit-backdrop-filter: blur(2px);
+    backdrop-filter: blur(2px);
+
+    pointer-events: none;
+   
+    transition: all;
+    transition-delay: 0.3s;
+    transition-duration: 0.5s;
+}
+
+.nav-button-span:hover .nav-dropdown {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.nav-dropdown:hover {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* footers */
+footer {
+    display: flex;
+    flex-direction: column;
+
+    justify-content: flex-end;
+    align-content: center;
+}
+
+footer > .footer-icons {
+    display: flex;
+
+    justify-content: center;
+}
+
+/* Copyright header */
+
+footer > p {
+    font-family: 'Montserrat-light';
+    font-size: 12px;
+    text-align: center;
+    color: #FFFFFF;
 }
