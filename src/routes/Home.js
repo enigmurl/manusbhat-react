@@ -6,7 +6,7 @@
  */
 
 import React from "react";
-import StandardTemplate from "../commons";
+import {StandardTemplate, Sidebar, SidebarElement} from "../commons";
 
 /* HOME [accessed by clicking Manu Bhat] 
  - Resume / CV

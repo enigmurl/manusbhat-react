@@ -6,7 +6,7 @@
  */
 
 import React from "react";
-import StandardTemplate from "../commons";
+import {StandardTemplate, Sidebar, SidebarElement} from "../commons";
 
 /* EXTRACURRICULARS
  - stuff like gdc, split into high school and no high school

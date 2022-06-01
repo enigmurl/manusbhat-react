@@ -6,7 +6,7 @@
  */
 
 import React from "react";
-import StandardTemplate from "../commons";
+import {StandardTemplate, Sidebar, SidebarElement} from "../commons";
 
 /* ACADEMIC | HONORS
  - Transcript (filter through all, APS, stem APs something like that)

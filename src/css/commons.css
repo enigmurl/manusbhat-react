@@ -6,24 +6,29 @@
  */
 
 
-.navbar {
+#navbar {
     position: fixed;
     width: 100vw;
     height: 65px;
+
+    top: 0;
+    left: 0;
 
     display: flex;
     justify-content: flex-end;
     align-items: center;
 
-    background: rgba(51, 51, 51, 0.6);
+    z-index: 1;
 
-    backdrop-filter: blur(4px);
-    border-bottom: ridge 0.25px gray;
-    box-shadow: 0px 2px 35px -4px black;
+    background: rgba(51, 51, 51, 0.8);
+
+    backdrop-filter: blur(12px);
+    border-bottom: ridge 0.25px #888888;
+    box-shadow: 0px 2px 35px -4px #000000;
 }
 
 /* Manu Bhat Title */
-.navbar > a {
+#navbar > a {
     font-family: 'PT serif';
     font-size: 40px;
     color: #EEEEFF;
@@ -35,32 +40,32 @@
     flex-grow: 1;
 }
 
-.nav-buttons {
+#nav-buttons {
     margin: 0 50px 0 20px;
 }
-.navbar ul {
+#navbar ul {
     list-style: none;
     padding-inline-start: 0px;
 }
-.nav-buttons {
+#nav-buttons {
     display: inline;
 }
-.nav-buttons li {
+#nav-buttons li {
     display: inline-block;
     position: relative;
 }
 /* second order are vertical */
-.nav-buttons ul li {
+#nav-buttons ul li {
     display: block;
 }
 
 /* add in the separators */
-.nav-buttons > li > .nav-button-link {
+#nav-buttons > li > .nav-button-link {
     border-right: solid 2px var(--accent);
     margin: 7px 0;
 }
 
-.nav-buttons > li:last-child > .nav-button-link {
+#nav-buttons > li:last-child > .nav-button-link {
     border-right: solid 0px var(--accent);
 } 
 
@@ -109,7 +114,7 @@
     pointer-events: none;
    
     transition: all;
-    transition-delay: 0.3s;
+    transition-delay: 0.7s;
     transition-duration: 0.5s;
 }
 
@@ -128,14 +133,33 @@ footer {
     display: flex;
     flex-direction: column;
 
+    width: 100vw;
+    height: 200px;
+
     justify-content: flex-end;
     align-content: center;
 }
 
-footer > .footer-icons {
+footer hr {
+    width: 80%;
+    margin-bottom: 40px;
+}
+
+footer > #footer-icons {
     display: flex;
 
     justify-content: center;
+}
+
+footer .footer-icon svg {
+    fill: var(--accent2) !important;
+    margin: -10px 4px;
+
+    transition: fill 0.3s;
+}
+
+footer .footer-icon:hover svg {
+    fill: #FFFFFF !important;
 }
 
 /* Copyright header */
@@ -145,4 +169,12 @@ footer > p {
     font-size: 12px;
     text-align: center;
     color: #FFFFFF;
+
+    margin-bottom: 40px;
+}
+
+@media screen and (max-width: 900px) {
+    #nav-buttons {
+        display: none;
+    }
 }

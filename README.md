@@ -3,4 +3,10 @@
 # Acknowledgements
 
 SVG icons were sourced from the following locations:
-* https://markhawkinsdesigns.com/blog/graphic-design/free-social-media-icon-pack-14-svg-rounded-hollow-cut-icons/
+* https://icons8.com/icon/62856/github
+* https://icons8.com/icon/Y2GfpkgYNp42/gmail
+* https://icons8.com/icon/60014/twitter
+* https://icons8.com/icon/60444/linkedin-circled
+* https://icons8.com/icon/30888/discord 
+* https://icons8.com/icon/32309/instagram 
+* https://icons8.com/icon/118466/facebook
