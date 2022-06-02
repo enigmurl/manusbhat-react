@@ -15,8 +15,10 @@
     left: 0;
 
     display: flex;
+    overflow: hidden;
+
     justify-content: flex-end;
-    align-items: center;
+    align-items: flex-start;
 
     z-index: 1;
 
@@ -25,10 +27,22 @@
     backdrop-filter: blur(12px);
     border-bottom: ridge 0.25px #888888;
     box-shadow: 0px 2px 35px -4px #000000;
+
+    transition: height 0.5s;
+}
+
+#navbar-main {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+    margin: 0 50px;
+
+    flex-grow: 1;
 }
 
 /* Manu Bhat Title */
-#navbar > a {
+#navbar-main > a {
     font-family: 'PT serif';
     font-size: 40px;
     color: #EEEEFF;
@@ -36,13 +50,13 @@
     text-align: center;
     text-decoration: none;
 
-    margin-left: 50px;
     flex-grow: 1;
 }
 
 #nav-buttons {
-    margin: 0 50px 0 20px;
+    margin: 10px 0 0 0;
 }
+
 #navbar ul {
     list-style: none;
     padding-inline-start: 0px;
@@ -128,6 +142,20 @@
     pointer-events: auto;
 }
 
+/* expansion */
+#navbar-expand-button {
+    display: none;
+
+    border-radius: 5px;
+    border: solid #888888;
+
+    cursor: pointer;
+    margin: 12px 10px;
+
+    width: 40px;
+    height: 40px;
+}
+
 /* footers */
 footer {
     display: flex;
@@ -174,7 +202,44 @@ footer > p {
 }
 
 @media screen and (max-width: 900px) {
+    .expanded {
+        /* does not interpolate well, so hard coding is better ig */
+        /* height: fit-content !important; */
+        height: 260px !important;
+    }
+
+    #navbar-main a {
+        margin-top: 5px;
+    }
+
     #nav-buttons {
+        margin: 0 0 0 5px;
+    }
+
+    #navbar-expand-button {
+        display: inline-block;
+    }
+
+    #navbar-main {
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+
+    .nav-dropdown {
         display: none;
     }
+
+    #nav-buttons li {
+        display: block;
+    }
+
+    #nav-buttons > li > .nav-button-link {
+        border-right: none;
+        border-bottom: solid 2px var(--accent);
+        margin: 7px 0;
+    }
+
+    #nav-buttons > li:last-child > .nav-button-link {
+        border-bottom: solid 0px var(--accent);
+    } 
 }
