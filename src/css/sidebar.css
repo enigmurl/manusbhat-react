@@ -1,0 +1,38 @@
+/**
+ *  COPYRIGHT © 2022 MANU BHAT
+ *  
+ *  ALL RIGHTS RESERVED
+ * 
+ */
+
+
+/* Side bar */
+#sidebar {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+
+    width: 125px;
+    height: 100vh;
+}
+
+#sidebar p {
+    font-family: 'Alegreya', '';
+    font-size: 15px;
+    text-align: center;
+    color: #FFFFFF;
+
+    position: absolute;
+    width: 100%;
+
+    transition: transform 0.5s;
+}
+#sidebar .finished-section {
+    color: green;
+}
+#sidebar .active-section {
+    color: yellow;
+}
+#sidebar .upcoming-section {
+    color: blue;
+}

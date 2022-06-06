@@ -6,7 +6,7 @@
  */
 
 import React from "react";
-import {StandardTemplate, Sidebar, SidebarElement} from "../commons";
+import {StandardTemplate, Sidebar, SidebarElement} from "../standard_template";
 
 
 /* WORK | SIGNIFICANT PROJECTS

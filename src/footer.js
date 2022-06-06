@@ -4,103 +4,11 @@
  *  ALL RIGHTS RESERVED
  * 
  */
-import './css/index.css'
-import './css/commons.css'
-import routing_dicitionary from './routing_structure';
 
-function StandardTemplate(props) {
-    return (
-        <div className='app'>
-            <header> 
-                <Navbar active={props.active}/>
-            </header>
+import React from "react";
+import "./css/globals.css"
+import "./css/footer.css"
 
-            <main>
-                {props.children}
-            </main>
-
-            <Footer/>
-        </div>
-    );
-}
-
-function ExpandNavbar() {
-    console.log("clicked");
-    const navbar = document.getElementById("navbar")
-    if (!navbar.classList.contains("expanded")) {
-        navbar.classList.add("expanded");
-    } else {
-        navbar.classList.remove("expanded");
-    }
-}
-
-/* NAVIGATION */
-function Navbar(props) {
-    return (
-        <nav id='navbar'>
-            <span id='navbar-main'> 
-                {/* actual Manu Bhat title */}
-                <a href='/'>Manu Bhat</a>
-                {/* separate buttons from title*/}
-                <ul id='nav-buttons'>  
-                    {/* Listed in right first order */}
-                    <Navitem title='Work | Large Projects' href='/work' active = {props.active}/>
-                    <Navitem title='Extracurriculars' href='/extracurriculars' active = {props.active}/>
-                    <Navitem title='Academics | Honors' href='/academics' active = {props.active}/>
-                    <Navitem title='Skills' href='/skills' active = {props.active}/>
-                    <Navitem title='Contact' href='/contact' active = {props.active}/>
-                </ul>
-            </span>
-            <button id='navbar-expand-button' onClick={ExpandNavbar}>
-                {/* Belive this is from bootstrap, but not sure */}
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path stroke="rgba(33,33,33,0.5)" strokeWidth="2" strokeLinecap="round" strokeMiterlimit="10" d="M4 8h24M4 16h24M4 24h24"/></svg>
-            </button>
-        </nav>
-    );
-}
-  
-function Navitem(props) {
-    const title = props.title;
-
-    let buttonClass = 'nav-button-link'
-    if (title === props.active) {
-        buttonClass += ' active-link'
-    }
-
-    const subList = routing_dicitionary[title] ?? [];
-    const genList = [];
-
-    for (const elemName of subList) {
-        genList.push(<Navitem key = {elemName.name} title = {elemName.name} href = {elemName.href} />)
-    }
-
-    /* see if it's a submenu */
-    if (genList.length === 0) {
-        return (
-            <li className='nav-button-span'>
-                <a href={props.href} className={buttonClass}>{props.title} </a>
-            </li>
-        );
-    }
-
-    return (
-        <li className='nav-button-span'>
-            <a href={props.href} className={buttonClass}>{props.title} </a>
-            <Navdropdown>
-                {genList}
-            </Navdropdown>
-        </li>
-    );
-}
-
-function Navdropdown(props) {
-    return (
-        <ul className='nav-dropdown'>
-            {props.children}
-        </ul>
-    );
-}
-  
 /* FOOTER */
 
 function Footer() {
@@ -114,7 +22,7 @@ function Footer() {
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 30 30">    <path d="M15,3C8.373,3,3,8.373,3,15c0,5.623,3.872,10.328,9.092,11.63C12.036,26.468,12,26.28,12,26.047v-2.051 c-0.487,0-1.303,0-1.508,0c-0.821,0-1.551-0.353-1.905-1.009c-0.393-0.729-0.461-1.844-1.435-2.526 c-0.289-0.227-0.069-0.486,0.264-0.451c0.615,0.174,1.125,0.596,1.605,1.222c0.478,0.627,0.703,0.769,1.596,0.769 c0.433,0,1.081-0.025,1.691-0.121c0.328-0.833,0.895-1.6,1.588-1.962c-3.996-0.411-5.903-2.399-5.903-5.098 c0-1.162,0.495-2.286,1.336-3.233C9.053,10.647,8.706,8.73,9.435,8c1.798,0,2.885,1.166,3.146,1.481C13.477,9.174,14.461,9,15.495,9 c1.036,0,2.024,0.174,2.922,0.483C18.675,9.17,19.763,8,21.565,8c0.732,0.731,0.381,2.656,0.102,3.594 c0.836,0.945,1.328,2.066,1.328,3.226c0,2.697-1.904,4.684-5.894,5.097C18.199,20.49,19,22.1,19,23.313v2.734 c0,0.104-0.023,0.179-0.035,0.268C23.641,24.676,27,20.236,27,15C27,8.373,21.627,3,15,3z"></path></svg>
                 </FooterIcon>
                 {/* Linked in */}
-                <FooterIcon href='https://www.linkedin.com/in/manu-bhat-344405238/'>
+                <FooterIcon href='https://www.linkedin.com/in/manusbhat/'>
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="30" height="30" viewBox="0 0 50 50">    <path d="M25,2C12.318,2,2,12.317,2,25s10.318,23,23,23s23-10.317,23-23S37.682,2,25,2z M18,35h-4V20h4V35z M16,17 c-1.105,0-2-0.895-2-2c0-1.105,0.895-2,2-2s2,0.895,2,2C18,16.105,17.105,17,16,17z M37,35h-4v-5v-2.5c0-1.925-1.575-3.5-3.5-3.5 S26,25.575,26,27.5V35h-4V20h4v1.816C27.168,20.694,28.752,20,30.5,20c3.59,0,6.5,2.91,6.5,6.5V35z"></path></svg>           
                 </FooterIcon>
                 {/* Gmail */}
@@ -139,7 +47,18 @@ function Footer() {
                 </FooterIcon>
             </div>
 
-            <p>Copyright © 2022 Manu Bhat. All rights reserved. </p>
+            {/* Works because our sub compiler will automatically hard code this value */}
+            <p> Last updated {
+                    ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][new Date().getMonth()]
+                }, {
+                    new Date().getDate()
+                }, {
+                    new Date().getFullYear()
+                }. Copyright © {
+                    new Date().getFullYear()
+                } Manu Bhat. All rights reserved.
+            </p>
+
         </footer>
     );
 }
@@ -154,22 +73,4 @@ function FooterIcon(props) {
     )
 }
 
-/* SIDEBAR */
-/* acts like a table of contents */
-function Sidebar(props) {
-    return (
-        <aside id='sidebar'> 
-            {props.children}
-        </aside>
-    )
-}
-
-function SidebarElement(props) {
-    return (
-        <p>
-            {props.title}
-        </p>
-    )
-}
-
-export {StandardTemplate, Sidebar, SidebarElement};
+export default Footer;

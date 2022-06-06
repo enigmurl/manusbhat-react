@@ -10,9 +10,6 @@
     justify-content: center;
 
     height: 100vh;
-
-     /* Leave header space */
-     margin-top: 100px;
 }
 
 #contact-page {
@@ -120,7 +117,7 @@
 }
 
 .contact-connector {
-    position: absolute;
+    position: relative;
 
     left: 50%;
     bottom: 50%;
@@ -129,8 +126,7 @@
     background-color: #FFFFFF;
 }
 
-
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 775px) {
     #contact-page {
         height: 650px;
 

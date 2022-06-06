@@ -17,7 +17,7 @@ import Home from './routes/Home';
 import Skills from './routes/Skills';
 import Work from './routes/Work';
 
-import './css/index.css';
+import './css/globals.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
