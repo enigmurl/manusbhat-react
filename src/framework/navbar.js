@@ -8,12 +8,12 @@
 import React from "react";
 
 import routing_dicitionary from "./routing_structure";
+import scrollTo from "./utilities";
+import "../css/globals.css"
+import '../css/navbar.css'
 
-import "./css/globals.css"
-import './css/navbar.css'
 
-
-function ExpandNavbar() {
+function expandNavbar() {
     const navbar = document.getElementById("navbar")
     if (!navbar.classList.contains("expanded")) {
         navbar.classList.add("expanded");
@@ -32,14 +32,14 @@ function Navbar(props) {
                 {/* separate buttons from title*/}
                 <ul id='nav-buttons'>  
                     {/* Listed in right first order */}
-                    <Navitem title='Work | Large Projects' href='/work' active = {props.active}/>
-                    <Navitem title='Extracurriculars' href='/extracurriculars' active = {props.active}/>
-                    <Navitem title='Academics | Honors' href='/academics' active = {props.active}/>
-                    <Navitem title='Skills' href='/skills' active = {props.active}/>
-                    <Navitem title='Contact' href='/contact' active = {props.active}/>
+                    <Navitem title='Work | Large Projects' active = {props.active}/>
+                    <Navitem title='Extracurriculars' active = {props.active}/>
+                    <Navitem title='Academics | Honors' active = {props.active}/>
+                    <Navitem title='Skills' active = {props.active}/>
+                    <Navitem title='Contact' active = {props.active}/>
                 </ul>
             </span>
-            <button id='navbar-expand-button' onClick={ExpandNavbar}>
+            <button id='navbar-expand-button' onClick={expandNavbar}>
                 {/* Belive this is from bootstrap, but not sure */}
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 30"><path stroke="rgba(33,33,33,0.5)" strokeWidth="2" strokeLinecap="round" strokeMiterlimit="10" d="M4 8h24M4 16h24M4 24h24"/></svg>
             </button>
@@ -47,6 +47,16 @@ function Navbar(props) {
     );
 }
   
+function handleNavItem(href, id, highLevel) {
+    if (window.location !== href) {
+        window.location.assign(href);
+    }
+
+    // if (!highLevel) {
+    //     scrollTo(id);
+    // }
+}
+
 function Navitem(props) {
     const title = props.title;
 
@@ -55,25 +65,28 @@ function Navitem(props) {
         buttonClass += ' active-link'
     }
 
-    const subList = routing_dicitionary[title] ?? [];
+    const subList = routing_dicitionary[title] ?? {submenu:[]};
     const genList = [];
 
-    for (const elemName of subList) {
-        genList.push(<Navitem key = {elemName.name} title = {elemName.name} href = {elemName.href} />)
+    const href = props.href || subList.href
+
+    for (const elemName of subList.submenu) {
+        // the '-section' gets the anchor translator
+        genList.push(<Navitem title = {elemName.name} key = {elemName.id} href = {href + '/#' + elemName.id + '-section'} />)
     }
 
     /* see if it's a submenu */
     if (genList.length === 0) {
         return (
             <li className='nav-button-span'>
-                <a href={props.href} className={buttonClass}>{props.title} </a>
+                <a href={href} className={buttonClass}>{props.title} </a>
             </li>
         );
     }
 
     return (
         <li className='nav-button-span'>
-            <a href={props.href} className={buttonClass}>{props.title} </a>
+            <a href={href} className={buttonClass}>{props.title} </a>
             <Navdropdown>
                 {genList}
             </Navdropdown>

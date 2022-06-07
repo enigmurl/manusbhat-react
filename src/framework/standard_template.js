@@ -7,7 +7,7 @@
 
 import React from "react";
 
-import './css/globals.css'
+import '../css/globals.css'
 
 import Navbar from "./navbar";
 import Footer from "./footer";

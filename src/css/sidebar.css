@@ -4,35 +4,48 @@
  *  ALL RIGHTS RESERVED
  * 
  */
-
-
 /* Side bar */
 #sidebar {
     display: flex;
     flex-direction: column;
     position: fixed;
 
-    width: 125px;
-    height: 100vh;
+    top: 100px;
+
+    width: 150px;
+    height: calc(100vh - 150px);
 }
 
-#sidebar p {
-    font-family: 'Alegreya', '';
-    font-size: 15px;
+#sidebar a {
+    font-family: 'Alegreya';
+    font-size: 12px;
     text-align: center;
-    color: #FFFFFF;
+    text-decoration: none;
+
+    cursor: pointer;
+
+    margin: 0;
+    padding: 0;
+    height: 18px;
 
     position: absolute;
     width: 100%;
 
-    transition: transform 0.5s;
+    transition: all 0.5s;
 }
 #sidebar .finished-section {
-    color: green;
+    color: white;
 }
 #sidebar .active-section {
     color: yellow;
+    font-size: 17px;
 }
 #sidebar .upcoming-section {
-    color: blue;
+    color: white;
+}
+
+@media only screen and (max-width: 850px) {
+    #sidebar {
+        display: none;
+    }
 }

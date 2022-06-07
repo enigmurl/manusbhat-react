@@ -19,7 +19,7 @@ footer {
 }
 
 footer hr {
-    width: 80%;
+    width: max(calc(100% - 300px), 75%);
     margin-bottom: 40px;
 }
 
@@ -41,7 +41,6 @@ footer .footer-icon:hover svg {
 }
 
 /* Copyright header */
-
 footer > p {
     font-family: 'Montserrat-light';
     font-size: 12px;

@@ -6,7 +6,7 @@
  */
 
 import React from "react";
-import {StandardTemplate, Sidebar, SidebarElement} from "../standard_template";
+import {StandardTemplate} from "../framework/standard_template";
 import "../css/skills.css"
 
 /* SKILLS
@@ -19,6 +19,7 @@ function Skills() {
             {/* section for Computer Science and Programming 
                 - web dev - 
                 - Algorithms and Data Structures - 5
+                - vim
                 - machine learning / AI
                 - game dev
                 - app development (ios / android)
@@ -31,6 +32,7 @@ function Skills() {
                 - Computer Visions
                 - Server Design
                 - Memory Management
+                - Distributed Systems
                 - Google cloud platform / Cloud
                 - Theoretical Computer Science (Big o, amortized analysis, oracles)
                 - C99/C++11
@@ -50,6 +52,8 @@ function Skills() {
             - Excel/Spreadsheets
             - CAD 
             - Public Relations
+            - Robotics
+            - Biomimicry ??
             */}
             {/* Qualities
             - learning fast

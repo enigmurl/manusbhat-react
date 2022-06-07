@@ -91,8 +91,10 @@
     font-family: 'Montserrat-light';
     color: #FFFFFF;
 
+    cursor: pointer;
     display: block;
 
+    margin: 0;
     padding: 6px 7px;
 }
 
@@ -159,6 +161,12 @@
     height: 40px;
 }
 
+
+/* Make sure navbar is not cut off */
+main {
+    margin-top: 100px;
+}
+
 @media screen and (max-width: 900px) {
     #navbar {
         overflow: hidden;
@@ -200,9 +208,4 @@
     #nav-buttons > li:last-child > .nav-button-link {
         border-bottom: solid 0px var(--accent);
     } 
-}
-
-/* Make sure navbar is not cut off */
-main {
-    margin-top: 100px;
 }

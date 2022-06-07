@@ -6,11 +6,11 @@
  */
 
 import React from "react";
-import {StandardTemplate} from "../standard_template";
-import { Sidebar, SidebarElement } from "../sidebar";
+import {StandardTemplate} from "../framework/standard_template";
+import { Sidebar, SidebarElement } from "../framework/sidebar";
 
+import "../css/globals.css"
 import "../css/extracurriculars.css"
-
 
 /* EXTRACURRICULARS
  - stuff like gdc, split into high school and no high school
@@ -19,12 +19,12 @@ function Extracurriculars() {
     return (
         <StandardTemplate active = 'Extracurriculars'> 
             <Sidebar>
-                <SidebarElement id='college' header='COLLEGE'/>
-                <SidebarElement id='high-school' header ='HIGH SCHOOL'/>
-                <SidebarElement id='high-school1' header ='HIGH SCHOOL 1'/>
-                <SidebarElement id='high-school2' header ='HIGH SCHOOL 2'/>
-                <SidebarElement id='high-school3' header ='HIGH SCHOOL 3'/>
-                <SidebarElement id='high-school4' header ='HIGH SCHOOL 4'/>
+                <SidebarElement id='college' header='COMPUTER SCIENCE'/>
+                <SidebarElement id='high-school' header ='CODING LANGUAGES'/>
+                <SidebarElement id='high-school1' header ='OTHER SKILLS'/>
+                <SidebarElement id='high-school2' header ='DIGITAL ART'/>
+                <SidebarElement id='high-school3' header ='QUALITIES'/>
+                <SidebarElement id='high-school4' header ='SPOKEN LANGUAGES'/>
                 <SidebarElement id='high-school5' header ='HIGH SCHOOL 5'/>
                 <SidebarElement id='high-school6' header ='HIGH SCHOOL 6'/>
                 <SidebarElement id='high-school7' header ='HIGH SCHOOL 7'/>
@@ -32,13 +32,13 @@ function Extracurriculars() {
                 <SidebarElement id='high-school9' header ='HIGH SCHOOL 9'/>
             </Sidebar>
 
-        <div id="extracurriculars">
+        <section id="extracurriculars">
             <p id ='college'>
                 college header
             </p>
 
             <p id ='high-school'>
-                high school header
+                PROGRAMMING LANGUAGES
             </p>
             <p id ='high-school1'>
                 high school header
@@ -68,7 +68,7 @@ function Extracurriculars() {
                 high school header
             </p>
             
-        </div>
+        </section>
 
         </StandardTemplate>
     );

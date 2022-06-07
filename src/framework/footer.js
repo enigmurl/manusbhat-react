@@ -6,8 +6,8 @@
  */
 
 import React from "react";
-import "./css/globals.css"
-import "./css/footer.css"
+import "../css/globals.css"
+import "../css/footer.css"
 
 /* FOOTER */
 

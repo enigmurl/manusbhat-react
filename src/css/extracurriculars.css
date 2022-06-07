@@ -6,10 +6,15 @@
  */
 
  #extracurriculars {
-     height: 150vh;
+     height: 600vh;
  }
 
  #extracurriculars p {
      width: 100vw;
-     height: 25vh;
+     height: 50vh;
+
+     background-color: blue;
+     text-align: center;
  }
+
+ 

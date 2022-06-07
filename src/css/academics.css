@@ -1,0 +1,165 @@
+/**
+ *  COPYRIGHT © 2022 MANU BHAT
+ *  
+ *  ALL RIGHTS RESERVED
+ * 
+ */
+
+.academics-content {
+    margin: 30px auto 40px;
+
+    width: min(100% - 20px, 800px);
+}
+
+/* Honors */
+
+ #honors-list {
+    padding: 0;
+
+    list-style: none;
+    flex-wrap: wrap;
+
+    display: flex;
+ }
+
+ .honor-item {
+     display: flex;
+     
+     width: 300px;
+     flex-grow: 1;
+
+     margin: 10px 20px 10px 20px;
+ }
+
+ .honor-title {
+    font-family: 'Montserrat-bold';
+    color: gold;
+
+    display: inline-block;
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+ }
+
+ .honor-description {
+    font-family: 'Montserrat-light';
+    color: white;
+
+    display: inline-block;
+
+    margin: 0 5px 0 0;
+    padding: 0;
+ }
+
+ .honor-rectangle {
+    border-radius: 5px;
+    background-color: #222;
+
+    height: 40px;
+
+    padding: 10px;
+
+    flex-grow: 1;
+ }
+
+ .honor-circle {
+     min-width: 10px;
+     min-height: 10px;
+     background-color: white;
+
+     border-radius: 50%;
+     align-self: center;
+
+     margin: 10px;
+ }
+
+
+ /* UCSD and CHS */
+
+ .academic-schedule {
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+ }
+
+ .academic-summary {
+     color: white;
+     font-family: 'Montserrat-light', sans-serif;
+
+     text-align: center;
+
+     margin: 0 auto;
+ }
+
+ .academic-term {
+    display: flex;
+    margin: 10px 0;
+ }
+
+ .term-header {
+    writing-mode: vertical-rl;
+    text-orientation: sideways-right;
+
+    transform: rotate(180deg);
+
+    font-family: 'Montserrat-bold';
+    font-size: 20px;
+    text-align: center;
+
+    color: var(--accent3);
+
+    margin: 0;
+
+    display: inline-block;
+    align-self: center;
+    padding: 5px 2px;
+ }
+
+.academic-course-list {
+    border-left: solid #ccc;
+    border-right: solid #ccc;
+
+    height: 200px;
+    width: 300px;
+
+    margin: 0 25px 0 3px;
+
+    display: inline-block;
+}
+
+.academic-course {
+    display: flex;
+    justify-content: space-between;
+
+    margin: 10px 10px;
+}
+
+.academic-course p {
+    display: inline-block;
+
+    font-family: 'Montserrat-light', sans-serif;
+    color: white;
+
+    margin: 0;
+}
+
+.academic-course .academic-grade-only {
+    width: 20px;
+    font-family: 'Montserrat-bold', sans-serif;
+}
+
+.academic-course .academic-ap {
+    width: 20px;
+    height: 20px;
+    text-align: center;
+
+    margin-right: 5px;
+
+    background-color: gold;
+    color: black;
+    font-family: 'Montserrat-bold';
+
+    border-radius: 50%;
+}

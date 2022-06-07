@@ -6,7 +6,7 @@
  */
 
 import React from "react";
-import {StandardTemplate} from "../standard_template";
+import {StandardTemplate} from "../framework/standard_template";
 
 import "../css/contact.css"
 
@@ -150,8 +150,10 @@ function MediaIcon(props) {
 }
 
 function cis(radius, theta) {
-    const cosT = Math.cos(theta * Math.PI / 180) * radius;
-    const sinT = Math.sin(theta * Math.PI / 180) * radius;
+    const rads = theta * Math.PI / 180;
+
+    const cosT = Math.cos(rads) * radius;
+    const sinT = Math.sin(rads) * radius;
 
     return [cosT, sinT];
 }
@@ -161,12 +163,9 @@ function theta(pivotAngle, index, angleSpan, numElements) {
 }
 
 function Connector(props) {
-    
     const [cosT, sinT] = cis(props.radius || connectorRad, parseInt(props.angle));
-
     const width = props.width || "10px"
     
-
     return (
         <span className="contact-connector" style={{
             width: width,
@@ -175,8 +174,5 @@ function Connector(props) {
         }}/>
     )
 }
-
-
-
 
 export default Contact;

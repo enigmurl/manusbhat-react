@@ -117,7 +117,7 @@
 }
 
 .contact-connector {
-    position: relative;
+    position: absolute;
 
     left: 50%;
     bottom: 50%;

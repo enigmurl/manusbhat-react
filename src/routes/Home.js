@@ -6,7 +6,9 @@
  */
 
 import React from "react";
-import {StandardTemplate} from "../standard_template";
+import {StandardTemplate} from "../framework/standard_template";
+
+import "../css/home.css"
 
 /* HOME [accessed by clicking Manu Bhat] 
  - Resume / CV
@@ -24,11 +26,11 @@ function Home() {
         <StandardTemplate active = 'Home'> 
 
             {/* picture and resume and cv */}
-            <div id="picture">
+            <section id="picture">
 
-            </div>
+            </section>
 
-            <div id="introductory-paragraph">
+            <section id="introductory-paragraph">
                 {/* Introductory header */}
                 <p>
                 Welcome! My name is Manu Shankar Bhat {/* Button for playing my name*/} and this is my website. 
@@ -81,8 +83,9 @@ function Home() {
                 {/* Vacation Spot: Norway (and the northern lights) */}
                 {/* Sports: American Football, Frisbee, Badminton */}
                 {/* Animals:  */}
+                {/* Video Game Character: El Primo */}
                 {/* Seal: NSA/Central Security Service */}
-                {/* Airplanes: Rockwell B1b Lancer, B748 */}
+                {/* Airplanes: Rockwell B-1B Lancer, B748, F-22 */}
                 {/* Newsletter: Quanta Magazine */}
 
                 <hr/>
@@ -92,7 +95,7 @@ function Home() {
                 However, do note that everything here is still a work in progress. 
                 Therefore, some sections may not be fully complete.
                 </p> 
-            </div>               
+            </section>               
         </StandardTemplate>
     );
 }
