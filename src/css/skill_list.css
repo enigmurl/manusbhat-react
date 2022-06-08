@@ -1,0 +1,98 @@
+/**
+ *  COPYRIGHT © 2022 MANU BHAT
+ *  
+ *  ALL RIGHTS RESERVED
+ * 
+ */
+
+.skill-group {
+    margin: 30px auto 40px;
+    width: min(100% - 20px, 800px);
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+ }
+
+ .skill-item {
+     display: flex;
+     
+     width: 300px;
+     flex-grow: 1;
+
+     margin: 10px 20px 10px 20px;
+ }
+
+ .skill-title {
+    font-family: 'Montserrat-bold';
+    color: gold;
+
+    display: inline-block;
+    width: 100%;
+
+    margin: 0;
+    padding: 0;
+ }
+
+ .skill-description {
+    font-family: 'Montserrat-light';
+    color: white;
+
+    display: inline-block;
+
+    margin: 0 5px 0 0;
+    padding: 0;
+ }
+
+ .skill-item a {
+    flex-grow: 1;
+ }
+
+ .skill-rectangle {
+    border-radius: 5px;
+    background-color: #222;
+
+    height: fit-content(40px);
+
+    padding: 10px;
+
+    display: flex;
+
+ }
+
+ .skill-circle {
+    min-width: 10px;
+    min-height: 10px;
+    background-color: white;
+
+    border-radius: 50%;
+    align-self: center;
+
+    margin: 10px;
+ }
+
+ .skill-image {
+    display: inline-block;
+
+    align-self: center;
+
+    width: 35px;
+    height: 35px;
+    margin-right: 10px;
+    border-radius: 5px;
+ }
+
+
+ .skill-text {
+     flex-grow: 1;
+     align-self: center;
+ }
+
+ .skill-rating {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+    color: var(--link);
+
+    align-self: center;
+ }

@@ -95,6 +95,7 @@
     display: block;
 
     margin: 0;
+    flex-grow: 1;
     padding: 6px 7px;
 }
 
@@ -118,8 +119,10 @@
     
     --extra-padding: 20px;
     width: calc(100% + var(--extra-padding));
-    /* border is 2px, -5px for extra */
-    transform: translateX(calc(-2px - var(--extra-padding)/2));
+    min-width: fit-content;
+
+    left: 50%;
+    transform: translateX(-50%);
 
     border: solid 2px var(--accent);
     border-radius: 5px;

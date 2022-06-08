@@ -9,10 +9,20 @@ import React from "react";
 
 import '../css/globals.css'
 
+import routing_dicitionary from "./routing_structure";
 import Navbar from "./navbar";
 import Footer from "./footer";
+import { Sidebar, SidebarElement } from "./sidebar";
 
 function StandardTemplate(props) {
+    var sidebarElements = [];
+    for (const elem of routing_dicitionary[props.active].submenu) {
+        sidebarElements.push(
+            <SidebarElement key = {elem.id} id={elem.id} header={elem.name.toUpperCase()} />
+        )
+    }
+
+
     return (
         <div id='app'>
             <header> 
@@ -21,6 +31,9 @@ function StandardTemplate(props) {
 
             <main>
                 {props.children}
+                <Sidebar>
+                    {sidebarElements}
+                </Sidebar>
             </main>
 
             <Footer/>

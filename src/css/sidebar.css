@@ -38,13 +38,13 @@
 }
 #sidebar .active-section {
     color: yellow;
-    font-size: 17px;
+    font-size: 16.5px;
 }
 #sidebar .upcoming-section {
     color: white;
 }
 
-@media only screen and (max-width: 850px) {
+@media only screen and (max-width: 1050px) {
     #sidebar {
         display: none;
     }

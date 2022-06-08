@@ -8,7 +8,6 @@
 import React from "react";
 
 import routing_dicitionary from "./routing_structure";
-import scrollTo from "./utilities";
 import "../css/globals.css"
 import '../css/navbar.css'
 
@@ -45,16 +44,6 @@ function Navbar(props) {
             </button>
         </nav>
     );
-}
-  
-function handleNavItem(href, id, highLevel) {
-    if (window.location !== href) {
-        window.location.assign(href);
-    }
-
-    // if (!highLevel) {
-    //     scrollTo(id);
-    // }
 }
 
 function Navitem(props) {

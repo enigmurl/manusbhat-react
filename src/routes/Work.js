@@ -7,6 +7,7 @@
 
 import React from "react";
 import {StandardTemplate} from "../framework/standard_template";
+import Section from "../framework/section";
 
 
 /* WORK | SIGNIFICANT PROJECTS
@@ -15,7 +16,13 @@ import {StandardTemplate} from "../framework/standard_template";
 function Work() {
     return (
         <StandardTemplate active = 'Work | Large Projects'> 
-            
+            <Section id = 'work' name='Work'>
+
+            </Section>
+
+            <Section id='large-projects' name ='Significant Projects'>
+
+            </Section>
         </StandardTemplate>
     );
 }

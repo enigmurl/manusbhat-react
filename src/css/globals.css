@@ -26,7 +26,7 @@ body {
 
 section {
   position: relative;
-  z-index: -1;
+  /* z-index: -1; */
 }
 
 .anchor-translator {
@@ -89,7 +89,7 @@ h1 {
   display: block;
 
   color: #EFF;
-  border-bottom: #FFFF00 ridge 2px;
+  border-bottom: var(--accent) ridge 2px;
 
   width: 350px;
   text-align: center;

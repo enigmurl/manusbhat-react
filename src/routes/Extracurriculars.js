@@ -7,10 +7,32 @@
 
 import React from "react";
 import {StandardTemplate} from "../framework/standard_template";
-import { Sidebar, SidebarElement } from "../framework/sidebar";
 
 import "../css/globals.css"
 import "../css/extracurriculars.css"
+import { Skill, SkillGroup } from "../framework/skill_list";
+
+function Extracurricular(props) {
+    if ("img_src" in props) {
+        return <Skill
+            name={props.name}
+            desc={props.desc}
+            img_src={props.img_src}
+            href = {props.href}
+            font-size="12px"
+        />
+    }
+
+    return (
+        <Skill
+            name={props.name}
+            desc={props.desc}
+            href = {props.href}
+            font-size="12px"
+
+        />
+    )
+}
 
 /* EXTRACURRICULARS
  - stuff like gdc, split into high school and no high school
@@ -18,57 +40,64 @@ import "../css/extracurriculars.css"
 function Extracurriculars() {
     return (
         <StandardTemplate active = 'Extracurriculars'> 
-            <Sidebar>
-                <SidebarElement id='college' header='COMPUTER SCIENCE'/>
-                <SidebarElement id='high-school' header ='CODING LANGUAGES'/>
-                <SidebarElement id='high-school1' header ='OTHER SKILLS'/>
-                <SidebarElement id='high-school2' header ='DIGITAL ART'/>
-                <SidebarElement id='high-school3' header ='QUALITIES'/>
-                <SidebarElement id='high-school4' header ='SPOKEN LANGUAGES'/>
-                <SidebarElement id='high-school5' header ='HIGH SCHOOL 5'/>
-                <SidebarElement id='high-school6' header ='HIGH SCHOOL 6'/>
-                <SidebarElement id='high-school7' header ='HIGH SCHOOL 7'/>
-                <SidebarElement id='high-school8' header ='HIGH SCHOOL 8'/>
-                <SidebarElement id='high-school9' header ='HIGH SCHOOL 9'/>
-            </Sidebar>
 
-        <section id="extracurriculars">
-            <p id ='college'>
-                college header
-            </p>
-
-            <p id ='high-school'>
-                PROGRAMMING LANGUAGES
-            </p>
-            <p id ='high-school1'>
-                high school header
-            </p>
-            <p id ='high-school2'>
-                high school header
-            </p>
-            <p id ='high-school3'>
-                high school header
-            </p>
-            <p id ='high-school4'>
-                high school header
-            </p>
-            <p id ='high-school5'>
-                high school header
-            </p>
-            <p id ='high-school6'>
-                high school header
-            </p>
-            <p id ='high-school7'>
-                high school header
-            </p>
-            <p id ='high-school8'>
-                high school header
-            </p>
-            <p id ='high-school9'>
-                high school header
-            </p>
+            <SkillGroup id = 'college' title="College">
+                <Extracurricular
+                    name    = "Nothing yet..."
+                    desc  = ""
+                />
+            </SkillGroup>
             
-        </section>
+            <SkillGroup id = 'high-school' title="High School">
+                <Extracurricular
+                    name  = "Game Dev Club"
+                    desc  = "2019-22 | President. Taught 30 members Unity via hands-on workshops. Incorporated elaborate topics (e.g. terrain generation)."
+                    img_src = "/img/gdc.png"
+
+                    href  = "https://gamedevclub.tech/"
+                />
+                <Extracurricular
+                    name  = "Tino Competitive Programming"
+                    desc  = "2020-22 | Advanced Mentor. Presented high-level algorithms and sample problems, even coming up with my own challenges."
+                    img_src = "/img/compprog.png"
+
+                />
+                <Extracurricular
+                    name  = "Tinovation"
+                    desc  = "2020-22 | PR & Android Mentor. Managed promo material and photographed meetings. Oversaw creation of Android app."
+                    img_src = "/img/tinovation.png"
+
+                    href = "https://tinovationchs.github.io/"
+                />
+                <Extracurricular
+                    name  = "Melon Jam"
+                    desc  = "2021-22 | Lead Organizer. Hosted a game jam of ~100 people, introducing many novices to game development."
+                    img_src = "/img/melonjam.png"
+
+                    href = "https://gamedevclub.tech/melonjam/"
+                />
+                <Extracurricular
+                    name  = "Atlas Hacks II (Hackathon)"
+                    desc  = "2021 | Logistics Director. Responsible for special events (e.g. guest speakers). Organized sponsorship selection."
+                    img_src = "/img/atlashacks.png"
+
+                />
+                <Extracurricular
+                    name  = "FTC Robotics (#11466)"
+                    desc  = "2019-20 | Software Lead. Helped design robot's strategy, hardware, and software. Chosen to be Mechanisms Driver."
+                    img_src = "/img/ftc.png"
+                />
+                <Extracurricular
+                    name  = "Tino Aviation and Rocketry"
+                    desc  = "2018-22 | Member. Engineered recovery system of a model rocket. Designed and simulated mock trajectories using CAD."
+                    img_src = "/img/tinoarc.png"
+                />
+                <Extracurricular
+                    name  = "Tech Challenge"
+                    desc  = "2018-2020 | Participant. Applied iterative design to real-world problem statements. Logged schematics to engineering journal."
+                    img_src = "/img/techchallenge.png"
+                />
+            </SkillGroup>
 
         </StandardTemplate>
     );

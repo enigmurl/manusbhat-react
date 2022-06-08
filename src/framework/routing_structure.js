@@ -9,17 +9,19 @@ const routing_dicitionary = {
     "Academics | Honors" : {
         href:"/academics.html",
         submenu:[
-        {
-            name:"Honors",
-            id:"honors"
-        }
-        , {
-            name:"UCSD",
-            id:"ucsd"
-        }, {
-            name:"CHS",
-            id:"chs"
-        }]
+            {
+                name:"Honors",
+                id:"honors"
+            }, 
+            {
+                name:"UCSD",
+                id:"ucsd"
+            }, 
+            {
+                name:"CHS",
+                id:"chs"
+            }
+        ]
     },
     Contact :   {
         href:"/contact.html",
@@ -29,52 +31,61 @@ const routing_dicitionary = {
     Extracurriculars : {
         href:"/extracurriculars.html",
         submenu:[
-        {
-            name:"Honors",
-            id:"honors"
-        }
-        , {
-            name:"UCSD",
-            id:"ucsd"
-        }, {
-            name:"CHS",
-            id:"chs"
-        }]
+            {
+                name:"College",
+                id:"college"
+            }, {
+                name:"High School",
+                id:"high-school"
+            }
+        ]
     },
     Home : {
         href:"/index.html",
         submenu:[
-        {
-            name:"Honors",
-            id:"honors"
-        }
-        , {
-            name:"UCSD",
-            id:"ucsd"
-        }, {
-            name:"CHS",
-            id:"chs"
-        }]
+        ]
     },
     Skills :  {
         href:"/skills.html",
         submenu:[
+            {
+                name:"Computer Science",
+                id:"computer-science"
+            }, 
+            {
+                name:"Coding Languages",
+                id:  "coding-languages"
+            }, 
+            {
+                name:"Digital Art",
+                id:"digital-art"
+            }, 
+            {
+                name:"Other Skills",
+                id:"other-skills"
+            }, 
+            {
+                name:"Qualities",
+                id:"qualities"
+            }, 
+            {
+                name:"Spoken Languages",
+                id:"spoken-languages"
+            }
         ]
     },
     "Work | Large Projects" : {
         href:"/work.html",
         submenu:[
-        {
-            name:"Honors",
-            id:"honors"
-        }
-        , {
-            name:"UCSD",
-            id:"ucsd"
-        }, {
-            name:"CHS",
-            id:"chs"
-        }]
+            {
+                name:"Work",
+                id:"work"
+            }
+            , {
+                name:"Large Projects",
+                id:"large-projects"
+            }
+        ]
     },
 };
 
