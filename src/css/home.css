@@ -5,5 +5,97 @@
  * 
  */
 
- 
- 
+
+#introductory-paragraph {
+    width: min(100% - 10px, 820px);
+
+    margin: 30px auto 40px;
+ }
+
+
+#introductory-paragraph p {
+    font-family: 'Montserrat-light';
+    color: white;
+    margin: 0%  20px;
+ }
+
+#name-pronounciation {
+    width: 20px;
+    height: 20px;
+
+    border: solid #888 1px;
+    border-radius: 3px;
+
+    background-color: #FF0;
+
+    position: relative;
+    display: inline-flex;
+    justify-content: center;
+    align-content: center;
+    /* bottom: 4px; */
+
+    margin: 0 4px;
+ }
+
+ #name-pronounciation:hover {
+    background-color: #CC0;
+ }
+
+ #name-pronounciation:active {
+    background-color: #990;
+ }
+
+ #name-pronounciation img {
+    width: 12px;
+    height: 12px;
+
+    align-self: center;
+    /* display: inline-block; */
+    /* position: static; */
+    /* top: 100%; */
+    /* left: 50%; */
+
+    /* transform: translateX(-50%) translateY(-50%); */
+ }
+
+ .favorites {
+     border-collapse: collapse;
+     margin: 20px auto;
+     padding: 20px;
+ }
+
+
+ .favorites td {
+     border: solid #FFF 1px;
+     padding: 10px;
+
+     font-family: 'Montserrat-light';
+     color: white;
+     text-align: center;
+ }
+
+ .favorites tr:first-child td {
+     border-top: none;
+ }
+
+ .favorites tr:last-child td {
+    border-bottom: none;
+}
+
+ .favorites td:first-child {
+    border-left: none;
+    max-width: 120px;
+ }
+ .favorites td:last-child {
+    border-right: none;
+    max-width: 400px;
+}
+
+.favorite-label {
+    color: rgb(0, 191, 255) !important;
+    font-family: 'Montserrat-bold' !important;
+}
+
+#color-value {
+    color: #3ba557 !important;
+}

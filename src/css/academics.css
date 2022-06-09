@@ -11,71 +11,6 @@
     width: min(100% - 20px, 800px);
 }
 
-/* Honors */
-
- #honors-list {
-    padding: 0;
-
-    list-style: none;
-    flex-wrap: wrap;
-
-    display: flex;
- }
-
- .honor-item {
-     display: flex;
-     
-     width: 300px;
-     flex-grow: 1;
-
-     margin: 10px 20px 10px 20px;
- }
-
- .honor-title {
-    font-family: 'Montserrat-bold';
-    color: gold;
-
-    display: inline-block;
-    width: 100%;
-
-    margin: 0;
-    padding: 0;
- }
-
- .honor-description {
-    font-family: 'Montserrat-light';
-    color: white;
-
-    display: inline-block;
-
-    margin: 0 5px 0 0;
-    padding: 0;
- }
-
- .honor-rectangle {
-    border-radius: 5px;
-    background-color: #222;
-
-    height: 40px;
-
-    padding: 10px;
-
-    flex-grow: 1;
- }
-
- .honor-circle {
-     min-width: 10px;
-     min-height: 10px;
-     background-color: white;
-
-     border-radius: 50%;
-     align-self: center;
-
-     margin: 10px;
-     z-index: -1;
- }
-
-
  /* UCSD and CHS */
 
  .academic-schedule {
@@ -119,8 +54,8 @@
  }
 
 .academic-course-list {
-    border-left: solid #ccc;
-    border-right: solid #ccc;
+    border-left: solid #aaa;
+    border-right: solid #aaa;
 
     height: fit-content;
     width: 300px;
@@ -148,6 +83,7 @@
 
 .academic-course .academic-grade-only {
     width: 20px;
+    color: white;
     font-family: 'Montserrat-bold', sans-serif;
 }
 

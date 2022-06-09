@@ -50,7 +50,7 @@ function Footer() {
             {/* Works because our sub compiler will automatically hard code this value */}
             <p> Last updated {
                     ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][new Date().getMonth()]
-                }, {
+                } {
                     new Date().getDate()
                 }, {
                     new Date().getFullYear()

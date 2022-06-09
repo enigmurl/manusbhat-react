@@ -133,7 +133,6 @@ function Academics() {
                     </Term>
                 </AcademicSchedule>
             </Section>
-        
         </StandardTemplate>
     );
 }
