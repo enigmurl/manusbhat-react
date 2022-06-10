@@ -22,7 +22,6 @@ echo "~~~~START GIT~~~~"
 
 ignore="#os and misc\n.DS_Store\n.env.local\n.env.development.local\n.env.test.local\n.env.production.local\n*.swp\n#manifests\nmanifest.json\nasset-manifest.json\n"
 
-echo "$ignore"
 echo "$ignore" > ".gitignore"
 
 git add -A
@@ -30,6 +29,6 @@ git commit -m $1
 git branch -M main
 
 git remote add origin https://github.com/manusbhat/manusbhat.github.io
-git push -u main origin --force
+git push -u origin main --force
 
 echo "~~~~FINISH~~~~"
