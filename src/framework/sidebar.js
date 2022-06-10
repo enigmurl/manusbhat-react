@@ -7,13 +7,10 @@
 
 import React from "react";
 
-import scrollTo from "./utilities";
-
 import "../css/globals.css"
 import "../css/sidebar.css"
 
 const padding = 75
-
 
 function sign(target) {
     const rect = target.getBoundingClientRect();
@@ -68,12 +65,15 @@ function retargetScrollHelper(children) {
             htmlElem.style.top = `calc(100% - ${counterBot-- * htmlElem.getBoundingClientRect().height}px)`
         }
 
+        htmlElem.style.opacity = 1;
     }
 }
 
 function retargetScroll(e) {
     const sidebar = document.getElementById('sidebar')
     if (!sidebar) return;
+
+
 
     retargetScrollHelper(sidebar.children);
 }
@@ -89,7 +89,7 @@ class Sidebar extends React.Component {
     }
 
     componentDidMount() {
-        retargetScroll()
+        // retargetScroll()
     }
 }
 
@@ -101,7 +101,6 @@ function SidebarElement(props) {
     )
 }
 
-
 document.onscroll = retargetScroll;
 
-export {Sidebar, SidebarElement, scrollTo} 
+export {Sidebar, SidebarElement} 

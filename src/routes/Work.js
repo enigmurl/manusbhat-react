@@ -66,7 +66,7 @@ function Work() {
                         {/* gmanim */}
                     <Project 
                         year    = '2020-ongoing'  
-                        title   = 'To be published ~Q1 2023'      
+                        title   = 'To be published NET Q1 2023'      
                         size    = "large"
                         img     = "/img/secret.webp"
                         top     = "20%"
@@ -75,7 +75,7 @@ function Work() {
                         {/* mansotn */}
                     <Project 
                         year    = '2022-ongoing'  
-                        title   = 'To be published ~Q3 2022'      
+                        title   = 'To be published NET Q3 2022'      
                         size    = "large"
                         img     = "/img/secret.webp"
                         top     = "35%"

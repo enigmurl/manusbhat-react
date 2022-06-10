@@ -5,6 +5,64 @@
  * 
  */
 
+#picture-section {
+    margin: 30px 0 30px;
+
+    display: flex;
+    justify-content: center;
+} 
+
+#picture {
+    height: 175px;
+    border-radius: 3px;
+
+    padding: 5px;
+    box-sizing: border-box;
+    border: solid white 2px;
+
+    margin: 0px 40px;
+}
+
+#resume-button {
+    width: 175px;
+    min-height: 175px;
+    border-radius: 50%;
+    background-color: #CCCCCC;
+
+    color: black;
+
+    display: inline-block;
+    border: solid 1px black;
+
+    transition: 0.5s;
+
+    position: relative;
+}
+
+#resume-button p {
+    text-align: center;
+    text-decoration: underline;
+
+    font-family: 'Montserrat-bold';
+    font-size: 30px;
+
+    padding: 0;
+    margin: 0;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translateX(-50%) translateY(-50%);
+}
+
+#resume-button:hover {
+    background-color: #DDD;
+    box-shadow: 0px 0px 10px 3px black;
+ }
+
+ #resume-button:active {
+    background-color: #999;
+ }
 
 #introductory-paragraph {
     width: min(100% - 10px, 820px);

@@ -8,6 +8,8 @@
 
 # production
 /build
+/compiled
+
 
 # misc
 .DS_Store
@@ -15,6 +17,7 @@
 .env.development.local
 .env.test.local
 .env.production.local
+*.swp
 
 npm-debug.log*
 yarn-debug.log*
@@ -22,4 +25,3 @@ yarn-error.log*
 
 #self
 plan.txt
-/compiled

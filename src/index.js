@@ -6,22 +6,21 @@
  */
 
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 
+import { render } from 'react-dom';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
-import Academics from './routes/Academics';
-import Contact from './routes/Contact';
-import Extracurriculars from './routes/Extracurriculars';
-import Home from './routes/Home';
-import Skills from './routes/Skills';
-import Work from './routes/Work';
+import Academics from './routes/academics';
+import Contact from './routes/contact';
+import Extracurriculars from './routes/extracurriculars';
+import Home from './routes/index';
+import Skills from './routes/skills';
+import Work from './routes/work';
 
 import './css/globals.css';
 import Compiler from './react-compiler/compiler';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+render(
   <Compiler>
     <BrowserRouter>
       <Routes>
@@ -35,5 +34,6 @@ root.render(
         <Route path="contact.html" element={<Contact />} />
       </Routes>
   </BrowserRouter>
-</Compiler>
+</Compiler>,
+ document.getElementById('root')
 );

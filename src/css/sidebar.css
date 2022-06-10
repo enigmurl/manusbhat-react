@@ -12,6 +12,8 @@
 
     top: 100px;
 
+    pointer-events: none;
+
     width: 175px;
     height: calc(100vh - 150px);
 }
@@ -23,10 +25,13 @@
     text-decoration: none;
 
     cursor: pointer;
+    pointer-events: all;
 
     margin: 0;
     padding: 0;
     height: 18px;
+
+    opacity: 0;
 
     position: absolute;
     width: 100%;

@@ -8,7 +8,7 @@
 import React from "react";
 import {StandardTemplate} from "../framework/standard_template";
 
-import "../css/home.css"
+import "../css/index.css"
 import Section from "../framework/section";
 
 /* HOME [accessed by clicking Manu Bhat] 
@@ -28,18 +28,24 @@ function playName() {
 }
 
 function Home() {
+
     return (
         <StandardTemplate active = 'Home'> 
-
-            {/* picture and resume and cv */}
-            <section id="picture">
-
-            </section>
 
             <Section id="about-me" name="About me">
                 <audio id ="name-audio">
                     <source src="/mp3/name.mp3" type="audio/mpeg"/>
                 </audio>
+
+                <div id = "picture-section">
+                    <img id = "picture" alt = "Manu Bhat" src="/img/manu.webp"/>
+
+                    <a id="resume-button" href="/pdf/resume.pdf" target="_blank" rel="noopener noreferrer">
+                        <p>Resume</p>
+                    </a>
+
+                </div>
+                
 
                 <div id="introductory-paragraph">
                     {/* Introductory header, done */}
@@ -210,4 +216,5 @@ function Home() {
     );
 }
 
+ 
 export default Home;

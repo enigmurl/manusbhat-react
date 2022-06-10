@@ -7,10 +7,92 @@
 
 import React from "react";
 
-import routing_dicitionary from "./routing_structure";
 import "../css/globals.css"
 import '../css/navbar.css'
 
+const routing_dicitionary = {
+    "Academics | Honors" : {
+        href:"/academics.html",
+        submenu:[
+            {
+                name:"Honors",
+                id:"honors"
+            }, 
+            {
+                name:"UCSD",
+                id:"ucsd"
+            }, 
+            {
+                name:"CHS",
+                id:"chs"
+            }
+        ]
+    },
+    Contact :   {
+        href:"/contact.html",
+        submenu:[
+        ]
+    },
+    Extracurriculars : {
+        href:"/extracurriculars.html",
+        submenu:[
+            {
+                name:"College",
+                id:"college"
+            }, {
+                name:"High School",
+                id:"high-school"
+            }
+        ]
+    },
+    Home : {
+        href:"/index.html",
+        submenu:[
+        ]
+    },
+    Skills :  {
+        href:"/skills.html",
+        submenu:[
+            {
+                name:"Computer Science",
+                id:"computer-science"
+            }, 
+            {
+                name:"Coding Languages",
+                id:  "coding-languages"
+            }, 
+            {
+                name:"Digital Art",
+                id:"digital-art"
+            }, 
+            {
+                name:"Other Skills",
+                id:"other-skills"
+            }, 
+            {
+                name:"Qualities",
+                id:"qualities"
+            }, 
+            {
+                name:"Spoken Languages",
+                id:"spoken-languages"
+            }
+        ]
+    },
+    "Work | Large Projects" : {
+        href:"/work.html",
+        submenu:[
+            {
+                name:"Work",
+                id:"work"
+            }
+            , {
+                name:"Large Projects",
+                id:"large-projects"
+            }
+        ]
+    },
+};
 
 function expandNavbar() {
     const navbar = document.getElementById("navbar")
@@ -61,7 +143,7 @@ function Navitem(props) {
 
     for (const elemName of subList.submenu) {
         // the '-section' gets the anchor translator
-        genList.push(<Navitem title = {elemName.name} key = {elemName.id} href = {href + '/#' + elemName.id + '-section'} />)
+        genList.push(<Navitem title = {elemName.name} key = {elemName.id} href = {href + '#' + elemName.id + '-section'} />)
     }
 
     /* see if it's a submenu */
@@ -91,4 +173,4 @@ function Navdropdown(props) {
     );
 }
 
-export default Navbar;
+export {routing_dicitionary, Navbar};

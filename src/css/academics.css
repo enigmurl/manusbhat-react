@@ -54,6 +54,9 @@
  }
 
 .academic-course-list {
+    background-color: #272727;
+    border-radius: 5px;
+
     border-left: solid #aaa;
     border-right: solid #aaa;
 
