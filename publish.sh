@@ -20,18 +20,8 @@ pwd
 
 echo "~~~~START GIT~~~~"
 
-ignore = "
-#os and misc\n
-.DS_Store\n
-.env.local\n
-.env.development.local\n
-.env.test.local\n
-.env.production.local\n
-*.swp\n
-#manifests\n
-manifest.json\n
-asset-manifest.json\n
-"
+ignore = "#os and misc\n.DS_Store\n.env.local\n.env.development.local\n.env.test.local\n.env.production.local\n*.swp\n#manifests\nmanifest.json\nasset-manifest.json\n"
+
 echo "$ignore"
 echo "$ignore" > ".gitignore"
 
