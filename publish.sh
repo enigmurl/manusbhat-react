@@ -33,13 +33,13 @@ manifest.json\n
 asset-manifest.json\n
 "
 
-echo "$gitignore" >> .gitignore
+echo "$gitignore" >> ".gitignore"
 
 git add -A
 git commit -m $0
 git branch -M main
 
 git remote add origin https://github.com/manusbhat/manusbhat.github.io
-git push -u main origin
+git push -u main origin --force
 
 echo "~~~~FINISH~~~~"
