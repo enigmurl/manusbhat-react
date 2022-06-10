@@ -9,7 +9,9 @@ fi
 echo "~~~~BUILD PHASE~~~~"
 npm run build
 
-echo "~~~~FINISH BUILD~~~~"
+echo "~~~~COPY README~~~~"
+cp README.md build/README.md
+
 
 echo "~~~~CHANGE DIRECTORIES~~~~"
 cd build/

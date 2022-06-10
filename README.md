@@ -1,9 +1,10 @@
-# The official personal website for Manu Bhat!
+# manusbhat.github.io 
 
-# Rules
-* A custom react to static html generator is used, and the following rules should be kept in mind
-1) What ever is run at compile time, is what is going to show up. Therefore, only use Date for something like a "last updated" section
-2) Only named functions can be used, no unnamed lambdas!
+This website serves two primary roles:
+* To help me learn web development (this is my first real project!)
+* Showcase a little bit about me
+
+I'll leave the README as that (since you can visit the website to learn more of course).
 
 # Acknowledgements
 
