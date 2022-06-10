@@ -18,11 +18,9 @@ import Skills from './routes/skills';
 import Work from './routes/work';
 
 import './css/globals.css';
-import Compiler from './react-compiler/compiler';
 
 render(
-  <Compiler>
-    <BrowserRouter>
+  <BrowserRouter>
       <Routes>
         <Route path="index.html" element={<Home />} />
         <Route path="/" element={<Home />} />
@@ -33,7 +31,6 @@ render(
         <Route path="skills.html" element={<Skills />} />
         <Route path="contact.html" element={<Contact />} />
       </Routes>
-  </BrowserRouter>
-</Compiler>,
+  </BrowserRouter>,
  document.getElementById('root')
 );
