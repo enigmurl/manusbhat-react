@@ -6,8 +6,8 @@
  */
 
 import React from 'react';
+import ReactDOM from 'react-dom/client';
 
-import { render } from 'react-dom';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
 
 import Academics from './routes/academics';
@@ -19,18 +19,18 @@ import Work from './routes/work';
 
 import './css/globals.css';
 
-render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <BrowserRouter>
-      <Routes>
-        <Route path="index.html" element={<Home />} />
-        <Route path="/" element={<Home />} />
+    <Routes>
+      <Route path="index.html" element={<Home />} />
+      <Route path="/" element={<Home />} />
 
-        <Route path="work.html" element={<Work />} />
-        <Route path="extracurriculars.html" element={<Extracurriculars />} />
-        <Route path="academics.html" element={<Academics />} />
-        <Route path="skills.html" element={<Skills />} />
-        <Route path="contact.html" element={<Contact />} />
-      </Routes>
-  </BrowserRouter>,
- document.getElementById('root')
+      <Route path="work.html" element={<Work />} />
+      <Route path="extracurriculars.html" element={<Extracurriculars />} />
+      <Route path="academics.html" element={<Academics />} />
+      <Route path="skills.html" element={<Skills />} />
+      <Route path="contact.html" element={<Contact />} />
+    </Routes>
+</BrowserRouter>
 );

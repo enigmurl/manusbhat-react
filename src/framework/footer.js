@@ -47,16 +47,7 @@ function Footer() {
                 </FooterIcon>
             </div>
 
-            {/* Works because our sub compiler will automatically hard code this value */}
-            <p> Last updated {
-                    ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][new Date().getMonth()]
-                } {
-                    new Date().getDate()
-                }, {
-                    new Date().getFullYear()
-                }. Copyright © {
-                    new Date().getFullYear()
-                } Manu Bhat. All rights reserved.
+            <p>Last updated <span id="git-last-commit-date">June 10, 2022</span>. Manu Bhat. All rights reserved.
             </p>
 
         </footer>

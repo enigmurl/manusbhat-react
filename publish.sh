@@ -5,6 +5,13 @@ if [ "$#" -ne 1 ]; then
     exit 1
 fi
 
+echo "~~~~INSERT DATE~~~~"
+
+d=$(date "+%B %d, %Y")
+echo "Git last commit date: $d"
+
+find src -type f -name "*.js" -exec sed -i "" "s|<span id=\"git-last-commit-date\">.*</span>|<span id=\"git-last-commit-date\">$d</span>|g" {} \;
+
 #publish
 echo "~~~~BUILD PHASE~~~~"
 npm run build
@@ -16,7 +23,6 @@ cp README.md build/README.md
 echo "~~~~CHANGE DIRECTORIES~~~~"
 cd build/
 
-
 echo "~~~~NOW IN~~~~"
 pwd
 
@@ -26,6 +32,7 @@ ignore="#os and misc\n.DS_Store\n.env.local\n.env.development.local\n.env.test.l
 
 echo "$ignore" > ".gitignore"
 
+git init
 git add -A
 git commit -m $1
 git branch -M main
