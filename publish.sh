@@ -20,7 +20,7 @@ pwd
 
 echo "~~~~START GIT~~~~"
 
-gitignore = "
+ignore = "
 #os and misc\n
 .DS_Store\n
 .env.local\n
@@ -32,11 +32,11 @@ gitignore = "
 manifest.json\n
 asset-manifest.json\n
 "
-
-echo "$gitignore" >> ".gitignore"
+echo "$ignore"
+echo "$ignore" > ".gitignore"
 
 git add -A
-git commit -m $0
+git commit -m $1
 git branch -M main
 
 git remote add origin https://github.com/manusbhat/manusbhat.github.io
