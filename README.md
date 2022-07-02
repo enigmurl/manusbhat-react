@@ -59,3 +59,4 @@ SVG and PNG icons were sourced from the following locations:
 * https://www.flaticon.com/free-icon/continuous_120798
 * https://www.flaticon.com/free-icon/collaboration_1441198
 * https://commons.wikimedia.org/wiki/File:Speaker_Icon.svg
+* https://icons8.com/icons/set/ocolus
