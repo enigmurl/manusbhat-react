@@ -143,6 +143,18 @@ function Skills() {
                     desc    = "Just getting started!"
                     rating  = "0"
                 />
+                <Skill
+                    name    = "Virtual/Augmented Reality"
+                    img_src = "/img/virtualreality.webp"
+                    desc    = "Just getting started!"
+                    rating  = "0"
+                />
+                <Skill
+                    name    = "Digital Signal Processing"
+                    img_src = "/img/dsp.webp"
+                    desc    = "Just getting started!"
+                    rating  = "0"
+                />
             </SkillGroup>
 
             <SkillGroup id = 'coding-languages' title="Coding Languages">
@@ -177,7 +189,7 @@ function Skills() {
                     rating  = "1"
                 />
                 <Skill
-                    name    = "Javascript ES6"
+                    name    = "Typescript/Javascript ES6"
                     img_src = "/img/javascriptes6.webp"
                     rating  = "1"
                 />

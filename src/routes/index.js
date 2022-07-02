@@ -66,7 +66,7 @@ function Home() {
                     {/* Explanation of my major */}
                     <p>
                     Growing up in Silicon Valley, I have been exposed to an innovative and risk-taking spirit since I was a young boy. Throughout the same time period,
-                    I took interest in problem solving subjects in school. Topics like Machine Learning, Robotics, and Graph Theory began to capture to my passion. 
+                    I took interest in problem-solving subjects in school. Topics like Machine Learning, Robotics, and Graph Theory began to capture to my passion. 
                     Mixing all of these together, choosing Mathematics and Computer Science to be my major came as a natural decision.
                     I especially like the theoretical side of computer science due to its mysterious beauty, though I partake in practical projects as well.
 

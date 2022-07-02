@@ -15,6 +15,12 @@ find src -type f -name "*.js" -exec sed -i "" "s|<span id=\"git-last-commit-date
 #publish
 echo "~~~~BUILD PHASE~~~~"
 npm run build
+echo $?
+if [ "$?" -ne 0]; then
+    echo "Error running npm run build" "$?"
+    exit 1
+fi
+
 
 echo "~~~~COPY README~~~~"
 cp README.md build/README.md
@@ -28,7 +34,7 @@ pwd
 
 echo "~~~~START GIT~~~~"
 
-ignore="#os and misc\n.DS_Store\n.env.local\n.env.development.local\n.env.test.local\n.env.production.local\n*.swp\n#manifests\nmanifest.json\nasset-manifest.json\n"
+ignore="#os and misc\n.DS_Store\n.env.local\n.env.development.local\n.env.test.local\n.env.production.local\n*.swp\n#manifests\n"
 
 echo "$ignore" > ".gitignore"
 

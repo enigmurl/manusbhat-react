@@ -11,7 +11,8 @@ footer {
     display: flex;
     flex-direction: column;
 
-    width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
     height: 200px;
 
     justify-content: flex-end;

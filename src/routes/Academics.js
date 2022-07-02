@@ -124,7 +124,7 @@ function Academics() {
                     </Term>
                     <Term title="12th Sem 2">
                         <Course courseName='AP Biology'              grade='A' ap='5'/>
-                        <Course courseName='AP Spanish Language'     grade='A+' ap='??'/>
+                        <Course courseName='AP Spanish Language'     grade='A+' ap='4'/>
                         <Course courseName='AP Statistics'           grade='A+' ap='5'/>
                         <Course courseName='AP Microeconomics'       grade='A+' ap='5'/>
                         <Course courseName='Voices of Modern Culture'grade='A-'/>

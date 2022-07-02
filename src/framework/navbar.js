@@ -6,13 +6,15 @@
  */
 
 import React from "react";
+import { Link } from "react-router-dom";
+import { HashLink } from "react-router-hash-link";
 
 import "../css/globals.css"
 import '../css/navbar.css'
 
 const routing_dicitionary = {
     "Academics | Honors" : {
-        href:"/academics.html",
+        href:"/academics",
         submenu:[
             {
                 name:"Honors",
@@ -29,12 +31,12 @@ const routing_dicitionary = {
         ]
     },
     Contact :   {
-        href:"/contact.html",
+        href:"/contact",
         submenu:[
         ]
     },
     Extracurriculars : {
-        href:"/extracurriculars.html",
+        href:"/extracurriculars",
         submenu:[
             {
                 name:"College",
@@ -46,12 +48,12 @@ const routing_dicitionary = {
         ]
     },
     Home : {
-        href:"/index.html",
+        href:"/",
         submenu:[
         ]
     },
     Skills :  {
-        href:"/skills.html",
+        href:"/skills",
         submenu:[
             {
                 name:"Computer Science",
@@ -80,7 +82,7 @@ const routing_dicitionary = {
         ]
     },
     "Work | Large Projects" : {
-        href:"/work.html",
+        href:"/work",
         submenu:[
             {
                 name:"Work",
@@ -109,7 +111,7 @@ function Navbar(props) {
         <nav id='navbar'>
             <span id='navbar-main'> 
                 {/* actual Manu Bhat title */}
-                <a href='/'>Manu Bhat</a>
+                <Link to='/'>Manu Bhat</Link>
                 {/* separate buttons from title*/}
                 <ul id='nav-buttons'>  
                     {/* Listed in right first order */}
@@ -150,14 +152,15 @@ function Navitem(props) {
     if (genList.length === 0) {
         return (
             <li className='nav-button-span'>
-                <a href={href} className={buttonClass}>{props.title} </a>
+                <HashLink to={href} className={buttonClass}>{props.title}</HashLink>
             </li>
         );
     }
 
     return (
         <li className='nav-button-span'>
-            <a href={href} className={buttonClass}>{props.title} </a>
+            <Link to={href} className={buttonClass}>{props.title}</Link>
+
             <Navdropdown>
                 {genList}
             </Navdropdown>
