@@ -47,7 +47,7 @@ function Footer() {
                 </FooterIcon>
             </div>
 
-            <p>Last updated <span id="git-last-commit-date">July 02, 2022</span>. Copyright © Manu Bhat 2022. All rights reserved.
+            <p>Last updated <span id="git-last-commit-date">July 06, 2022</span>. Copyright © Manu Bhat 2022. All rights reserved.
             </p>
 
         </footer>
